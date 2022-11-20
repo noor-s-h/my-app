@@ -1,7 +1,6 @@
-import classNames from "utils/classNames"
+import classNames from 'utils/classNames'
 
 export default function ChevronIcon({ open }) {
-  
   return (
     <svg
       viewBox="0 0 24 24"

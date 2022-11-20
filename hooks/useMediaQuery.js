@@ -1,9 +1,9 @@
-import { useLayoutEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function useMediaQuery(mediaQueryString) {
   const [matches, setMatches] = useState(null)
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const mediaQueryList = window.matchMedia(mediaQueryString)
     const listener = () => setMatches(!!mediaQueryList.matches)
     listener()

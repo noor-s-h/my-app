@@ -29,7 +29,7 @@ export default function Dropdown({ title, submenus }) {
   }
 
   return (
-    <Popover as="li" className="relative" key="index">
+    <Popover as="li" className="relative">
       {({ open }) => (
         <>
           <Popover.Button
@@ -58,7 +58,7 @@ export default function Dropdown({ title, submenus }) {
               <ul className="flex flex-col gap-4 rounded border bg-white p-4 shadow-sm">
                 {submenus.map(({ title, url }, index) => (
                   <li key={index}>
-                    <Popover.Button as="a" href={url} className="link">
+                    <Popover.Button as="a" href={url} className="flex">
                       {title}
                     </Popover.Button>
                   </li>
