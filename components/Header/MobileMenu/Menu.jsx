@@ -22,7 +22,7 @@ export default function Menu({ menus }) {
             <Accordion key="index" title={title} submenus={submenus} />
           ) : (
             <li key={index}>
-              <Popover.Button as="a" href={url} className="link">
+              <Popover.Button as="a" href={url} className="flex">
                 {title}
               </Popover.Button>
             </li>
