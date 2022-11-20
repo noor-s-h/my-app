@@ -13,7 +13,10 @@ export default function Menu({ menus }) {
       leaveFrom="opacity-100 translate-y-0"
       leaveTo="opacity-0 translate-y-2"
     >
-      <Popover.Panel as="ul" className="mobile-menu">
+      <Popover.Panel
+        as="ul"
+        className="top-17 absolute inset-x-0 flex flex-col gap-4 border-b bg-white p-4"
+      >
         {menus.map(({ title, url, submenus }, index) =>
           submenus ? (
             <Accordion key="index" title={title} submenus={submenus} />

@@ -1,10 +1,10 @@
 import { useRef, Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
-import ChevronIcon from '../icons/ChevronIcon'
+import ChevronIcon from 'icons/ChevronIcon'
 
 export default function Dropdown({ title, submenus }) {
   const buttonRef = useRef(null)
-  const timeoutDuration = 200
+  const timeoutDuration = 100
   let timeout
 
   const closePopover = () => {
@@ -51,11 +51,11 @@ export default function Dropdown({ title, submenus }) {
             leaveTo="opacity-0 translate-y-2"
           >
             <Popover.Panel
-              className="desktop-submenu"
+              className="absolute left-1/2 min-w-[10rem] -translate-x-1/2  pt-4"
               onMouseEnter={onMouseEnter.bind(null, open)}
               onMouseLeave={onMouseLeave.bind(null, open)}
             >
-              <ul className="desktop-submenu-item">
+              <ul className="flex flex-col gap-4 rounded border bg-white p-4 shadow-sm">
                 {submenus.map(({ title, url }, index) => (
                   <li key={index}>
                     <Popover.Button as="a" href={url} className="link">

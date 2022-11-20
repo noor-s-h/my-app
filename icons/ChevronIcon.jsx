@@ -1,7 +1,7 @@
+import classNames from "utils/classNames"
+
 export default function ChevronIcon({ open }) {
-  function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-  }
+  
   return (
     <svg
       viewBox="0 0 24 24"

@@ -8,39 +8,6 @@
   }
 }
 
-.header {
-  @apply border-b bg-white;
-}
-
-.nav {
-  @apply container flex h-16 items-center justify-between;
-}
-
-.burger {
-  @apply sm:hidden;
-}
-
-.mobile-menu {
-  @apply absolute inset-x-0 flex flex-col gap-4 border-b bg-white p-4 sm:hidden sm:flex-row;
+.top-17 {
   top: calc(theme('spacing.16') + theme('spacing.px'));
-}
-
-.mobile-submenu {
-  @apply mt-4 flex flex-col gap-4 border-l pl-4;
-}
-
-.desktop-menu {
-  @apply hidden items-center gap-8 sm:flex;
-}
-
-.desktop-submenu {
-  @apply absolute left-1/2 min-w-[10rem] -translate-x-1/2  pt-4;
-}
-
-.desktop-submenu-item {
-  @apply flex flex-col gap-4 rounded border bg-white p-4 shadow-sm;
-}
-
-.link {
-  @apply flex;
 }
